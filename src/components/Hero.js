@@ -21,8 +21,8 @@ const SpinningCube = () => {
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
-      <div className="w-full h-screen flex items-center justify-center bg-gray-900">
+    <section id="hero" className="min-h-screen flex items-center justify-center text-white">
+      <div className="w-full h-screen flex items-center justify-center">
         <Canvas>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
