@@ -9,13 +9,13 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center text-white pt-20">
+      className="min-h-screen flex items-center justify-center text-white">
       <div className="container mx-auto">
         <div className="w-full h-screen flex flex-row items-center justify-center space-x-10">
           <div className="flex flex-col items-start space-y-5">
             <h1 className="text-6xl font-bold">Bienvenido a mi portafolio</h1>
             <p className="text-2xl">
-              Soy [tu nombre], un desarrollador informático apasionado por la
+              Soy Rody Chuquimia, un desarrollador informático apasionado por la
               tecnología
             </p>
             <Link

@@ -55,7 +55,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="h-screen py-8 px-20 text-white flex items-center justify-center">
-      <div className="card bg-gray-900 mx-auto px-4 lg:px-8 py-4 rounded-md shadow-lg w-full">
+      <div className="card bg-section mx-auto px-4 lg:px-8 py-4 rounded-md shadow-lg w-full">
         <h2 className="text-center text-2xl mb-6">Proyectos</h2>
         <p className="text-center text-lg leading-relaxed mb-4">
           Estos son algunos de mis proyectos recientes. Siéntase libre de

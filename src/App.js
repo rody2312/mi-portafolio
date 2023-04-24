@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 import ParticlesBackground from "./components/ParticlesBackground";
 
@@ -13,7 +14,7 @@ const App = () => {
   return (
     <div className="min-h-screen">
       <ParticlesBackground />
-      <Nav />
+      <Header />
       <Hero />
       <About />
       <Skills />
