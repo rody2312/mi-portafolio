@@ -1,78 +1,102 @@
-// Contact.js
 import React, { useState } from "react";
+import {
+  FaLinkedin,
+  FaEnvelope,
+  FaMobileAlt,
+  FaMapMarkerAlt,
+  FaGithub,
+} from "react-icons/fa";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+  const [showData, setShowData] = useState({
+    linkedin: false,
+    phone: false,
+    email: false,
+    location: false,
   });
 
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aquí puedes agregar el código para enviar el formulario, como enviar un correo electrónico
-    console.log("Formulario enviado:", formData);
+  const handleShowData = (type) => {
+    setShowData({ ...showData, [type]: !showData[type] });
   };
 
   return (
     <section
       id="contact"
-      className="min-h-screen py-8 px-4 bg-section text-white"
+      className="py-16 px-4 bg-section text-white"
     >
-      <div className="container mx-auto shadow-xl p-4">
-        <h2 className="text-center text-2xl mb-6">Contáctame</h2>
-        <div className="max-w-md mx-auto">
-          <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label htmlFor="name" className="block mb-2">
-                Nombre:
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded"
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="email" className="block mb-2">
-                Correo electrónico:
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded"
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="message" className="block mb-2">
-                Mensaje:
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                className="w-full px-3 py-2 border border-gray-300 rounded"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300"
+      <h2 className="text-center text-2xl mb-6">
+        <span className="section-title">Contacto</span>
+      </h2>
+      <div className="max-w-md mx-auto">
+        <div className="bg-blue-975 rounded-md shadow-md p-4">
+          <div className="flex flex-col gap-4">
+            <div
+              className="flex items-center gap-4 cursor-pointer hover:bg-blue-900 p-2 rounded"
+              onClick={() => handleShowData("phone")}
             >
-              Enviar
-            </button>
-          </form>
+              <FaMobileAlt className="text-4xl" />
+              <div>
+                <h4 className="text-lg font-semibold">Teléfono</h4>
+                {showData.phone && <p>+123 456 7890</p>}
+              </div>
+            </div>
+            <div
+              className="flex items-center gap-4 cursor-pointer hover:bg-blue-900 p-2 rounded"
+              onClick={() => handleShowData("email")}
+            >
+              <FaEnvelope className="text-4xl" />
+              <div>
+                <h4 className="text-lg font-semibold">Email</h4>
+                {showData.email && (
+                  <p>
+                    <a href="mailto:your-email@example.com" target="_blank">
+                      your-email@example.com
+                    </a>
+                  </p>
+                )}
+              </div>
+            </div>
+            <div
+              className="flex items-center gap-4 cursor-pointer hover:bg-blue-900 p-2 rounded"
+              onClick={() => handleShowData("location")}
+            >
+              <FaMapMarkerAlt className="text-4xl" />
+              <div>
+                <h4 className="text-lg font-semibold">Localidad</h4>
+                {showData.location && <p>Ciudad, País</p>}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-md mx-auto mt-10">
+        <div className="bg-blue-975 rounded-md shadow-md p-4">
+          <h3 className="text-center text-lg font-medium mb-2">
+            Redes Sociales
+          </h3>
+          <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-col items-center m-2">
+                <a
+                  href="https://www.linkedin.com/in/tu-usuario/"
+                  className="text-blue-300 hover:text-blue-400"
+                  target="_blank"
+                >
+                  <FaLinkedin className="inline-block text-4xl mr-2" /> LinkedIn
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-col items-center m-2">
+              <a
+                href="https://github.com/tu-usuario"
+                className="text-blue-300 hover:text-blue-400"
+                target="_blank"
+              >
+                <FaGithub className="inline-block text-4xl mr-2" /> GitHub
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ const NavMobile = ({ isOpen, onClose }) => (
     className={`fixed top-0 left-0 w-full h-full z-20 ${
       isOpen ? "block" : "hidden"
     }`}
-    style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}
+    style={{ backgroundColor: "rgba(0, 0, 0, 0.90)" }}
   >
     <div className="h-full flex flex-col justify-between">
       <div className="flex justify-end mt-6 mr-6">
@@ -27,6 +27,9 @@ const NavMobile = ({ isOpen, onClose }) => (
         </NavItem>
         <NavItem to="projects" onClick={onClose}>
           Proyectos
+        </NavItem>
+        <NavItem to="contact" onClick={onClose}>
+          Contacto
         </NavItem>
       </div>
       <div className="mb-6"></div>

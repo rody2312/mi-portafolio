@@ -1,10 +1,16 @@
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInfoCircle } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen py-8 px-20 text-white flex items-center justify-center">
+    <section
+      id="about"
+      className="min-h-screen py-8 px-20 text-white flex items-center justify-center"
+    >
       <div className="card bg-section mx-auto px-4 lg:px-8 py-4 rounded-md shadow-lg w-full">
-        <h2 className="text-center text-2xl mb-6">Acerca de mí</h2>
+        <h2 className="text-center text-2xl mb-6">
+          <FaInfoCircle className="section-icon inline-block text-4xl mr-2" />
+          <span className="section-title">Acerca de mí</span>
+        </h2>
         <div className="container mx-auto">
           <div className="flex flex-wrap flex-col-reverse lg:flex-row items-center justify-between">
             <div className="flex-1 text-lg leading-relaxed">
@@ -35,6 +41,7 @@ const About = () => {
                 <a
                   href="https://www.linkedin.com/in/tu-usuario/"
                   className="text-blue-300 hover:text-blue-400"
+                  target="_blank"
                 >
                   <FaLinkedin className="inline-block text-4xl mr-2" /> LinkedIn
                 </a>
@@ -43,6 +50,7 @@ const About = () => {
                 <a
                   href="https://github.com/tu-usuario"
                   className="text-blue-300 hover:text-blue-400"
+                  target="_blank"
                 >
                   <FaGithub className="inline-block text-4xl mr-2" /> GitHub
                 </a>

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaProjectDiagram } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
 const ProjectCard = ({ project }) => {
@@ -56,7 +57,10 @@ const Projects = () => {
   return (
     <section id="projects" className="h-screen py-8 px-20 text-white flex items-center justify-center">
       <div className="card bg-section mx-auto px-4 lg:px-8 py-4 rounded-md shadow-lg w-full">
-        <h2 className="text-center text-2xl mb-6">Proyectos</h2>
+      <h2 className="text-center text-2xl mb-6">
+          <FaProjectDiagram className="section-icon inline-block text-4xl mr-2" />
+          <span className="section-title">Proyectos</span>
+        </h2>
         <p className="text-center text-lg leading-relaxed mb-4">
           Estos son algunos de mis proyectos recientes. Siéntase libre de
           revisar el código fuente y ver cómo funcionan.

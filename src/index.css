@@ -16,6 +16,10 @@ code {
     monospace;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 
 /* Nav.js */
 .nav {
@@ -47,6 +51,11 @@ code {
   color: #f9c80e;
 }
 
+.blur-background {
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* Hero.js */
 .hero {
   width: 100%;
@@ -61,12 +70,6 @@ code {
 /* About.js */
 .about {
   padding: 2rem 0;
-}
-
-.about-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 .about-content {
@@ -93,3 +96,45 @@ code {
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+
+/* estilo de titulos de cada sección */
+.section-title {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  color: #66b3ff;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #66b3ff;
+  display: inline-block;
+}
+
+.section-icon {
+  color: #66b3ff;
+}
+
+/* Animaciones de Skills */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.grid .fade-in-up:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+
+.grid .fade-in-up:nth-child(even) {
+  animation-delay: 1s;
+}
+

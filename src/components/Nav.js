@@ -25,7 +25,7 @@ const Nav = ({ onMenuOpen }) => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-10 ${
-        scrolled ? 'bg-black h-16' : 'h-20'
+        scrolled ? 'bg-black h-16 bg-opacity-70 blur-background' : 'h-20'
       } transition-all duration-300 flex items-center`}
     >
       <div className="container mx-auto px-4 py-2">
@@ -41,6 +41,9 @@ const Nav = ({ onMenuOpen }) => {
           </li>
           <li>
             <NavItem to="projects">Proyectos</NavItem>
+          </li>
+          <li>
+            <NavItem to="contact">Contacto</NavItem>
           </li>
           <li className="lg:hidden ml-4">
             <button
