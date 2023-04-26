@@ -15,21 +15,34 @@ const NavMobile = ({ isOpen, onClose }) => (
           <FaTimes size={32} />
         </button>
       </div>
-      <div className="flex-grow flex flex-col justify-center items-center space-y-6">
+      <div
+        className="flex-grow flex flex-col justify-center items-center space-y-6"
+        onClick={onClose}
+      >
         <NavItem to="hero" onClick={onClose}>
-          Inicio
+          <div className="text-3xl" onClick={onClose}>
+            Inicio
+          </div>
         </NavItem>
-        <NavItem to="about" onClick={onClose}>
-          Acerca de mí
+        <NavItem to="about">
+          <div className="text-3xl" onClick={onClose}>
+            Acerca de mí
+          </div>
         </NavItem>
         <NavItem to="skills" onClick={onClose}>
-          Habilidades
+          <div className="text-3xl" onClick={onClose}>
+            Habilidades
+          </div>
         </NavItem>
         <NavItem to="projects" onClick={onClose}>
-          Proyectos
+          <div className="text-3xl" onClick={onClose}>
+            Proyectos
+          </div>
         </NavItem>
         <NavItem to="contact" onClick={onClose}>
-          Contacto
+          <div className="text-3xl" onClick={onClose}>
+            Contacto
+          </div>
         </NavItem>
       </div>
       <div className="mb-6"></div>

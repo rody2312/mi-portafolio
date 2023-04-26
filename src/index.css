@@ -138,3 +138,23 @@ code {
   animation-delay: 1s;
 }
 
+
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
+
+.nav-desktop {
+  display: block;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile {
+    display: block;
+  }
+}

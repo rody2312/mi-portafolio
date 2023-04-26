@@ -8,9 +8,7 @@ const Header = () => {
   return (
     <>
       <Nav onMenuOpen={() => setMenuOpen(true)} />
-      <div className="lg:hidden">
-        <NavMobile isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
-      </div>
+      <NavMobile isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );
 };
