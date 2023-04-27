@@ -113,7 +113,7 @@ const Skills = () => {
           utilizado recientemente:
         </p>
         <div className="container mx-auto m-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
             {skills.map((skillGroup, index) => (
               <SkillGroup
                 key={index}

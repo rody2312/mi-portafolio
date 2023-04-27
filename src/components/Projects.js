@@ -12,18 +12,47 @@ const ProjectCard = ({ project }) => {
         inView ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"
       }`}
     >
-      <div className="bg-white rounded-lg shadow-md p-4">
-        <h3 className="text-xl mb-2">{project.title}</h3>
-        <p className="text-sm mb-4">{project.description}</p>
-        <div className="space-x-2">
+      <div className="bg-blue-975 rounded-lg shadow-md p-4">
+        <div className="relative">
+          <img
+            className="w-full h-40 object-cover mb-4 rounded-t-lg"
+            src="https://via.placeholder.com/300x200"
+            alt={project.title}
+          />
+          <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-gray-900 opacity-0 hover:opacity-100 transition-opacity duration-500">
+            <div className="h-full flex items-center justify-center">
+              <p className="text-sm text-white px-4">{project.description}</p>
+            </div>
+          </div>
+        </div>
+        <h3 className="text-xl mb-2 text-white">{project.title}</h3>
+        <div className="mb-4 space-x-2">
           {project.technologies.map((tech, index) => (
             <span
               key={index}
-              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 my-2"
             >
               {tech}
             </span>
           ))}
+        </div>
+        <div className="flex justify-between">
+          <a
+            href="https://github.com/tu-usuario/proyecto"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-blue-500 text-white max-sm:mx-2 text-xs sm:text-sm px-3 py-2 rounded-md transition-all duration-300 ease-in-out hover:bg-blue-600 hover:shadow-lg"
+          >
+            Ver código fuente
+          </a>
+          <a
+            href="https://ejemplo.com"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-green-500 text-white max-sm:mx-2 text-xs sm:text-sm px-3 py-2 rounded-md transition-all duration-300 ease-in-out hover:bg-green-600 hover:shadow-lg"
+          >
+            Visitar sitio web
+          </a>
         </div>
       </div>
     </div>
@@ -66,7 +95,7 @@ const Projects = () => {
           revisar el código fuente y ver cómo funcionan.
         </p>
         <div className="container mx-auto text-black">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
