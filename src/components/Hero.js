@@ -2,16 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter";
 
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown, FaDownload } from "react-icons/fa";
 
 const Hero = () => {
   const [animationDone, setAnimationDone] = useState(false);
+  const [typeWriterDone, setTypeWriterDone] = useState(false);
 
   const cvLink = "https://drive.google.com/path/to/your/resume.pdf";
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationDone(true);
+      setTypeWriterDone(true);
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -24,7 +26,9 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="w-full h-screen flex flex-col items-center justify-center space-y-4 md:space-y-10">
           <div className="flex flex-col items-start space-y-2 md:space-y-5">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">Hola, soy</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+              Hola, soy
+            </h2>
             <h1 className="text-5xl sm:text-6xl md:text-9xl font-bold pb-5">
               <Typewriter
                 words={["Rody Chuquimia"]}
@@ -35,9 +39,22 @@ const Hero = () => {
               />
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-              Desarrollador informático
+              Titulado como Ingeniero Informático
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl">Apasionado por la tecnología</p>
+            
+              {typeWriterDone ?
+              <p className="text-lg sm:text-xl md:text-2xl">
+                Soy&nbsp;
+                <Typewriter
+                  words={["desarrollador", "un informático enfocado al Backend", "flexible y adaptable"]}
+                  loop={3}
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                /> 
+              </p> : "" }
+              
+            
             <div className="flex space-x-4">
               <Link
                 to="about"
@@ -57,7 +74,10 @@ const Hero = () => {
                   animationDone ? "animate-pulse" : ""
                 }`}
               >
-                Descargar CV
+                <div className="flex">
+                  <FaDownload className="block mr-2 mt-1" />
+                  Descargar CV
+                </div>
               </a>
             </div>
           </div>
@@ -73,7 +93,6 @@ const Hero = () => {
               <FaAngleDown className="animation-bounce" size={50} />
             </Link>
           </div>
-
         </div>
       </div>
     </section>

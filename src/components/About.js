@@ -1,4 +1,9 @@
-import { FaLinkedin, FaGithub, FaInfoCircle } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaInfoCircle,
+  FaGraduationCap,
+} from "react-icons/fa";
 
 const About = () => {
   return (
@@ -25,6 +30,23 @@ const About = () => {
                 vanguardia de las tendencias tecnológicas y ofrecer soluciones
                 innovadoras y de alto impacto en cualquier negocio.
               </p>
+              <div className="mt-8">
+                <h3 className="text-lg font-medium mb-2">
+                  <FaGraduationCap className="inline-block text-4xl mr-2" />
+                  Estudios
+                </h3>
+                <ul className="list-none list-inside">
+                  <li className="mb-4">
+                    Ingeniería en Informática - Universidad ABC (2019 - 2022)
+                  </li>
+                  <li className="mb-4">
+                    <a href="#">
+                      Certificación en Desarrollo Web Full Stack - Platzi (2021)
+                    </a>
+                  </li>
+                  {/* Agrega más estudios aquí si lo deseas */}
+                </ul>
+              </div>
             </div>
             <div className="flex-1 text-center">
               <img
