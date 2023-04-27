@@ -77,7 +77,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen py-8 lg:px-20 px-10 text-white flex items-center justify-center"
+      className="min-h-screen py-8 lg:px-20 md:px-10 px-5 text-white flex items-center justify-center"
     >
       <div className="card bg-section mx-auto px-4 lg:px-8 py-4 rounded-md shadow-lg w-full">
         <h2 className="text-center text-2xl mb-6">
