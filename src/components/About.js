@@ -3,7 +3,10 @@ import {
   FaGithub,
   FaInfoCircle,
   FaGraduationCap,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
+
+import { IoShareSocial } from "react-icons/io5"
 
 const About = () => {
   return (
@@ -31,8 +34,8 @@ const About = () => {
                 innovadoras y de alto impacto en cualquier negocio.
               </p>
               <div className="mt-8">
-                <h3 className="text-lg font-medium mb-2">
-                  <FaGraduationCap className="inline-block text-4xl mr-2" />
+                <h3 className="flex text-lg font-medium mb-2">
+                  <FaGraduationCap className="inline-block text-4xl mr-2" size={30} />
                   Estudios
                 </h3>
                 <ul className="list-none list-inside">
@@ -40,8 +43,9 @@ const About = () => {
                     Ingeniería en Informática - Universidad ABC (2019 - 2022)
                   </li>
                   <li className="mb-4">
-                    <a href="#">
-                      Certificación en Desarrollo Web Full Stack - Platzi (2021)
+                    <a href="#" className="flex items-center">
+                      Certificación en Desarrollo Web Full Stack - Platzi (2021) 
+                      <FaExternalLinkAlt className="ml-3" size={15} />
                     </a>
                   </li>
                   {/* Agrega más estudios aquí si lo deseas */}
@@ -57,7 +61,10 @@ const About = () => {
             </div>
           </div>
           <div className="mt-8">
-            <h3 className="text-lg font-medium mb-2">Redes Sociales</h3>
+            <h3 className="flex text-lg font-medium mb-2">
+              <IoShareSocial className="inline-block text-4xl mr-2" size={30} />
+              Redes Sociales
+            </h3>
             <ul className="list-none list-inside flex flex-col">
               <li className="mb-4">
                 <a

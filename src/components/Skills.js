@@ -3,7 +3,7 @@ import { FaReact, FaPython, FaHtml5, FaCss3, FaGit, FaCode } from "react-icons/f
 
 import { TbBrandVscode, TbBrandRedux } from "react-icons/tb"
 
-import { SiDjango, SiJavascript } from "react-icons/si";
+import { SiDjango, SiJavascript, SiMysql } from "react-icons/si";
 
 import { useInView } from "react-intersection-observer";
 
@@ -65,6 +65,7 @@ const Skills = () => {
       items: [
         { Icon: FaPython, label: "Python", color: "#3776AB" },
         { Icon: SiDjango, label: "Django", color: "#092E20" },
+        { Icon: SiMysql, label: "MySQL", color: "#4479A1" },
       ],
     },
     {
